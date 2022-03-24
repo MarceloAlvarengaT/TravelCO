@@ -310,34 +310,20 @@ figcaption {
     text-align: left;
 }
 
-#usuario{
-    display: flex;
-    justify-content: flex-start;
+.campo_formulario{
     border-radius: 6px;
     border: none;
     height: 30px;
     width: 300px;
 }
 
-#contrasena{
-    display: flex;
-    justify-content: flex-start;
-    border-radius: 6px;
-    border: none;
-    height: 30px;
-    width: 300px;
+
+.texto_campo{
+    
 }
 
-.texto_usuario{
-    display: flex;
-    justify-content: flex-start;
-    height: 2px;
-}
-
-.texto_contrasena{
-    display: flex;
-    justify-content: flex-start;
-    height: 2px;
+.lbl_contrasena{
+    margin-top:10px;
 }
 
 #boton_ingresar{
@@ -471,3 +457,33 @@ figcaption {
     justify-content: center;
     margin-bottom: 20px;
 }
+
+@media (max-width: 420px) {
+    .login{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0px;
+        top: 150px;
+    }
+    .contenedor_login{
+        position: relative;
+        background-color: rgb(191, 213, 190);
+        width: 70%;
+        height: 500px;
+        min-width: 300px;
+        text-align: center;
+        margin: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+    }
+    .contenedor_login input[type="text"], input[type="password"]{
+        background-color: red;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+  }
