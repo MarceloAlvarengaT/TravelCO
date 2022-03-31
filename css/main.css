@@ -83,9 +83,9 @@ body{
 }
 
 #caribe:hover{
-    filter: drop-shadow(1px 1px 0 rgb(136, 235, 213)) 
-    drop-shadow(-1px -1px 0 rgb(136, 235, 213));
-    z-index: 1;
+    filter: drop-shadow(1px 1px 0 rgb(61, 61, 61)) 
+    drop-shadow(-1px -1px 0 rgb(61, 61, 61));
+    z-index: 3;
 }
 
 #andina{
@@ -95,9 +95,9 @@ body{
 }
 
 #andina:hover{
-    filter: drop-shadow(1px 1px 0 rgb(136, 235, 213)) 
-    drop-shadow(-1px -1px 0 rgb(136, 235, 213));
-    z-index: 1;
+    filter: drop-shadow(1px 1px 0 rgb(61, 61, 61)) 
+    drop-shadow(-1px -1px 0 rgb(61, 61, 61));
+    z-index: 3;
 }
 
 
@@ -107,9 +107,9 @@ body{
 }
 
 #pacifica:hover{
-    filter: drop-shadow(1px 1px 0 rgb(136, 235, 213)) 
-    drop-shadow(-1px -1px 0 rgb(136, 235, 213));
-    z-index: 1;
+    filter: drop-shadow(1px 1px 0 rgb(61, 61, 61)) 
+    drop-shadow(-1px -1px 0 rgb(61, 61, 61));
+    z-index: 3;
 }
 
 
@@ -119,9 +119,9 @@ body{
 }
 
 #orinoco:hover{
-    filter: drop-shadow(1px 1px 0 rgb(136, 235, 213)) 
-    drop-shadow(-1px -1px 0 rgb(136, 235, 213));
-    z-index: 1;
+    filter: drop-shadow(1px 1px 0 rgb(61, 61, 61)) 
+    drop-shadow(-1px -1px 0 rgb(61, 61, 61));
+    z-index: 3;
 }
 
 
@@ -131,9 +131,9 @@ body{
 }
 
 #amazonia:hover{
-    filter: drop-shadow(1px 1px 0 rgb(136, 235, 213)) 
-    drop-shadow(-1px -1px 0 rgb(136, 235, 213));
-    z-index: 1;
+    filter: drop-shadow(1px 1px 0 rgb(61, 61, 61)) 
+    drop-shadow(-1px -1px 0 rgb(61, 61, 61));
+    z-index: 3;
 }
 
 .contenedor_recomendaciones{
