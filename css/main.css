@@ -284,22 +284,17 @@ figcaption {
 }
 
 
-.login{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    left: 0px;
-    top: 150px;
-}
 .contenedor_login{
-    position: relative;
+    position: absolute;
     background-color: rgb(191, 213, 190);
     width: 385px;
     height: 500px;
-    min-width: 300px;
+    top: 50%;
+    margin-left: -180px;
+    margin-top: -250px;
+    left: 50%;
     text-align: center;
-    margin: none;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -458,7 +453,9 @@ figcaption {
     margin-bottom: 20px;
 }
 
-@media (max-width: 420px) {
+/* Media Movil */
+
+@media (max-width: 480px) {
     .login{
         position: absolute;
         width: 100%;
@@ -481,7 +478,6 @@ figcaption {
         border-radius: 25px;
     }
     .contenedor_login input[type="text"], input[type="password"]{
-        background-color: red;
         margin-left: 5px;
         margin-right: 5px;
     }
