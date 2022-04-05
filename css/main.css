@@ -5,6 +5,70 @@ body{
     font-family: Poppins;
 }
 
+.navbar_web{
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(170, 218, 197);
+    z-index: 10;
+    
+}
+
+.navbar_web li, a{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(66, 90, 90);
+}
+
+.usuario_nav{
+    font-weight: 600;
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.nav_links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+
+.nav_links li a:hover{
+    color: white;
+}
+
+
+
+.logo{
+    transform: scale(0.8);
+    margin-right: auto;
+}
+
+.name_logo{
+    font-size: 16px;
+    position: absolute;
+    left: 74px;
+    font-weight: 600;
+    color: rgb(66, 90, 90);
+}
+
+.profile_pic{
+    transform: scale(0.3);
+    position: absolute;
+    right: -18px;
+}
+
 
 .contenedor_nombre{
     position: fixed;
@@ -16,7 +80,7 @@ body{
     left: 0px;
     top: 0px;
     text-align: center;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     border-bottom-left-radius: 25px;
@@ -36,7 +100,7 @@ body{
    
     position: relative;
     font-size: 18px;
-    top: 120px;
+    top: 90px;
     width: 100%;
     height: 30px;
     text-align: center;
@@ -48,7 +112,7 @@ body{
 .contenedor_mapa{
     position: relative;
     width: 100%;
-    height: 750px;
+    height: 720px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,6 +279,8 @@ body{
 
 
 .contenedor_menu{
+
+    display: none;
     position: fixed;
     bottom: 10px;
     background: rgb(170, 218, 197);
@@ -222,7 +288,6 @@ body{
     width: 100%;
     height: 60px;
     left: 0px;
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -544,23 +609,18 @@ figcaption {
 
 /* Media Movil */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+
+    .navbar_web {display: none;}
     
     .contenedor_recomendaciones {display: none;}
 
     .galeria_recomendaciones{display: none;}
 
+    .contenedor_nombre{display: flex;}
+
     .contenedor_menu{
-        position: fixed;
-        bottom: 10px;
-        background: rgb(170, 218, 197);
-        border-radius: 25px;
-        width: 100%;
-        height: 60px;
-        left: 0px;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
     }
 
   }
