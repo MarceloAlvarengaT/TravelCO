@@ -13,13 +13,35 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   
+    <script>
 
+      let btn_mapa, ventana;
+
+      window.onload = init;
+
+      function init(){
+        btn_mapa = document.getElementById("btn_mapa");
+        ventana = document.getElementById("ventana");
+        btn_mapa.addEventListener("click",abrir);
+        btn_mapa.addEventListener("mouseout",cerrar);
+      }
+
+      function abrir(evt){
+        ventana.classList.add("mostrar");
+      }
+
+      function cerrar(evt){
+        ventana.classList.remove("mostrar");
+      }
+
+    </script>
 
     <title>TravelCO</title>
 
   
   </head>
   <body>
+    <div id="ventana" class="panel"></div>
     <div class="navbar_web">
       <div>
         <ul class="nav_links">
@@ -317,6 +339,16 @@
       <a href="review.html"><img src="imgs/write_icon2.png"></a>
       <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
 
+    </div>
+
+    <div class="dropup">
+      <button class="dropbtn" id="btn_mapa"><img src="imgs/home_icon2.png" alt=""></button>
+      <div class="dropup-content">
+        <a href="feed.html"><img src="imgs/feed_icon2.png"></a>
+        <a href="search.html"><img src="imgs/search_icon2.png"></a>
+        <a href="review.html"><img src="imgs/write_icon2.png"></a>
+        <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
+      </div>
     </div>
 
   </body>
