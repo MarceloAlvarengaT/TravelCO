@@ -647,12 +647,12 @@ figcaption {
     
 }
   
-
+/* 
   
 .dropup:hover .dropup-content {
     display: block;
 
-}
+} */
 
 .mostrar{
     display: block !important;

@@ -15,23 +15,26 @@
   
     <script>
 
-      let btn_mapa, ventana;
+      let btn_mapa, ventana, dropupmenu;
 
       window.onload = init;
 
       function init(){
         btn_mapa = document.getElementById("btn_mapa");
         ventana = document.getElementById("ventana");
+        dropupmenu = document.getElementById("dropupmenu");
         btn_mapa.addEventListener("click",abrir);
-        btn_mapa.addEventListener("mouseout",cerrar);
+        btn_mapa.addEventListener("mouseleave",cerrar);
       }
 
       function abrir(evt){
         ventana.classList.add("mostrar");
+        dropupmenu.classList.add("mostrar");
       }
 
       function cerrar(evt){
         ventana.classList.remove("mostrar");
+        dropupmenu.classList.remove("mostrar");
       }
 
     </script>
@@ -343,7 +346,7 @@
 
     <div class="dropup">
       <button class="dropbtn" id="btn_mapa"><img src="imgs/home_icon2.png" alt=""></button>
-      <div class="dropup-content">
+      <div class="dropup-content" id="dropupmenu">
         <a href="feed.html"><img src="imgs/feed_icon2.png"></a>
         <a href="search.html"><img src="imgs/search_icon2.png"></a>
         <a href="review.html"><img src="imgs/write_icon2.png"></a>
