@@ -230,6 +230,8 @@ body{
     font-weight: 600;
 }
 
+
+
 #description{
     font-size: 12px;
     position: relative;
@@ -322,7 +324,7 @@ body{
     left: 0px;
     top: 0px;
     text-align: center;
-    display: flex;
+    display: none;
     align-items: flex-end;
     justify-content: center;
     z-index: 2;
@@ -341,7 +343,7 @@ body{
     left: 0px;
     top: 30px;
     text-align: center;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1;
@@ -353,7 +355,7 @@ body{
 
     position: absolute;
     font-size: 18px;
-    top: 110px;
+    top: 835px;
     left: 15px;
     width: 100%;
     height: 50px;
@@ -364,8 +366,7 @@ body{
 
 .galeria{
     position: relative;
-    background-color: aqua;
-    top: 140px;
+    top: 440px;
     max-height: 180px;
     display: flex;
     overflow-x: auto;
@@ -410,7 +411,7 @@ figcaption {
 
     position: absolute;
     font-size: 18px;
-    top: 320px;
+    top: 560px;
     left: 15px;
     width: 100%;
     height: 50px;
@@ -420,10 +421,11 @@ figcaption {
 }
 
 .contenedor_cuerpo{
+    display: none;
     position: absolute;
     margin-left: 15px;
     margin-right: 15px;
-    top: 355px;
+    top: 600px;
 }
 
 #contenedor_text1{
@@ -669,6 +671,31 @@ figcaption {
     z-index: 1;
 }
 
+.titulo_web{
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+}
+
+.gallery2{
+   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 110px;
+    left: 15px;
+}
+
+.cuerpo_web{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
 
 /* Media Tablet */
 @media (max-width: 1024px){
@@ -679,6 +706,44 @@ figcaption {
 
     .dropup{
         display: flex;
+    }
+
+    .titulo_region{
+        display: flex;
+    }
+
+    .titulo_caribe{
+        display: flex;
+    }
+
+    .titulo_web{
+        display: none;
+    }
+
+    .contenedor_about{
+        top: 320px;
+        left: 15px;
+    }
+
+    .contenedor_cuerpo{
+        display: block;
+        top: 355px;
+    }
+
+    .galeria{
+        top: 140px;
+    }
+
+    .contenedor_ldi{
+        top: 110px;
+    }
+
+    .gallery2{
+        display: none;
+    }
+
+    .cuerpo_web{
+        display: none;
     }
 }  
 
