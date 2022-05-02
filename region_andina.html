@@ -12,7 +12,31 @@
   
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
 
+        let btn_mapa, ventana, dropupmenu;
+  
+        window.onload = init;
+  
+        function init(){
+          btn_mapa = document.getElementById("btn_mapa");
+          ventana = document.getElementById("ventana");
+          dropupmenu = document.getElementById("dropupmenu");
+          btn_mapa.addEventListener("click",abrir);
+          btn_mapa.addEventListener("mouseleave",cerrar);
+        }
+  
+        function abrir(evt){
+          ventana.classList.add("mostrar");
+          dropupmenu.classList.add("mostrar");
+        }
+  
+        function cerrar(evt){
+          ventana.classList.remove("mostrar");
+          dropupmenu.classList.remove("mostrar");
+        }
+  
+      </script>
 
 
     <title>TravelCO-Andina</title>
@@ -22,15 +46,36 @@
   <body>
     
 
-    <div class="titulo_region">
+    <div class="titulo_region" id="titulo_movil">
        REGIÓN
     </div>
 
-    <div class="titulo_caribe">
+    <div class="titulo_caribe" id="titulo_movil">
         ANDINA
     </div>
 
- 
+    
+    <div id="ventana" class="panel"></div>
+    <div class="navbar_web">
+        <div>
+            <ul class="nav_links">
+                <img class="logo" src="imgs/icono_xxs.png" alt="">
+                <div class="name_logo">TravelCO</div>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contribución</a></li>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#" class="usuario_nav">Marcela</a></li>
+                <li></li>
+                <img class="profile_pic" src="imgs/profile_pic.png" alt="">
+            </ul>
+        </div>
+    </div>
+    
+    <div class="titulo_web">
+        REGIÓN ANDINA
+    </div>
+
+    <div class="gallery2"> <img src="imgs/gallery_andina.png" alt=""></div>
 
     <div class="contenedor_ldi">
 
@@ -44,7 +89,7 @@
 
             <figure>
                 <img src="imgs/an_catedral.png">
-                <figcaption>Catedral de sal</figcaption>
+                <figcaption>Catedral de Sal</figcaption>
             </figure>
     
         </div>
@@ -78,7 +123,7 @@
 
             <figure>
                 <img src="imgs/an_nevados.png">
-                <figcaption>Parque de los nevados</figcaption>
+                <figcaption>Parque de los Nevados</figcaption>
             </figure>
     
         </div>
@@ -86,51 +131,27 @@
 
     </div>
 
+   
+
     <div class="contenedor_about">
 
         <div>Acerca De</div>
   
     </div>
 
+    <div class="cuerpo_web">
+        
+        La región Andina es una de las seis regiones naturales de Colombia. Está ubicada en el centro del país, limitando al norte con la región Caribe, al noreste con Venezuela, al este con la Orinoquía, al sureste con la Amazonia, al sur con Ecuador y al oeste con la región del Pacífico.
+        <br>
+        <br>
+        Está surcada en dirección SO-NE por tres ramales septentrionales de los Andes: las cordilleras Occidental, Central y Oriental. Las cordilleras dan lugar a numerosos valles, cañones, mesetas y un sistema fluvial cuyos principales ríos son el Cauca y el Magdalena. La región tiene 34 419 398 habitantes (2018), es la zona más poblada y económicamente más activa del país.    
     <div class="contenedor_cuerpo">
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
-
-               <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-
-            </div>
-
-            <div class="col" id="totuga">
-
-                <img src="imgs/c_totuga.jpg">
-
-            </div>
         
-
-        </div>
-
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
-
-               <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-
-            </div>
-
-        </div>
-        
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
+        La región Andina es una de las seis regiones naturales de Colombia. Está ubicada en el centro del país, limitando al norte con la región Caribe, al noreste con Venezuela, al este con la Orinoquía, al sureste con la Amazonia, al sur con Ecuador y al oeste con la región del Pacífico.         <br>
+        <br>
+        <br>
+        Está surcada en dirección SO-NE por tres ramales septentrionales de los Andes: las cordilleras Occidental, Central y Oriental. Las cordilleras dan lugar a numerosos valles, cañones, mesetas y un sistema fluvial cuyos principales ríos son el Cauca y el Magdalena. La región tiene 34 419 398 habitantes (2018), es la zona más poblada y económicamente más activa del país.    
     
-               <div>Imagenes usadas con el permiso de Fotoclombia.com</div>
-    
-            </div>
-    
-        </div>
-
-    </div>
    
 
 
@@ -143,6 +164,16 @@
       <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
 
     </div>
+
+    <div class="dropup">
+        <button class="dropbtn" id="btn_mapa"><img src="imgs/home_icon2.png" alt=""></button>
+        <div class="dropup-content" id="dropupmenu">
+          <a href="feed.html"><img src="imgs/feed_icon2.png"></a>
+          <a href="search.html"><img src="imgs/search_icon2.png"></a>
+          <a href="review.html"><img src="imgs/write_icon2.png"></a>
+          <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
+        </div>
+      </div>
 
    
   </body>

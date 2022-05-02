@@ -12,25 +12,70 @@
   
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+
+        let btn_mapa, ventana, dropupmenu;
+  
+        window.onload = init;
+  
+        function init(){
+          btn_mapa = document.getElementById("btn_mapa");
+          ventana = document.getElementById("ventana");
+          dropupmenu = document.getElementById("dropupmenu");
+          btn_mapa.addEventListener("click",abrir);
+          btn_mapa.addEventListener("mouseleave",cerrar);
+        }
+  
+        function abrir(evt){
+          ventana.classList.add("mostrar");
+          dropupmenu.classList.add("mostrar");
+        }
+  
+        function cerrar(evt){
+          ventana.classList.remove("mostrar");
+          dropupmenu.classList.remove("mostrar");
+        }
+  
+      </script>
 
 
-
-    <title>TravelCO-Amazonía</title>
+    <title>TravelCO-Amazonia</title>
 
   
   </head>
   <body>
     
 
-    <div class="titulo_region">
+    <div class="titulo_region" id="titulo_movil">
        REGIÓN
     </div>
 
-    <div class="titulo_caribe">
-        AMAZONÍA
+    <div class="titulo_caribe" id="titulo_movil">
+        AMAZONIA
     </div>
 
- 
+    
+    <div id="ventana" class="panel"></div>
+    <div class="navbar_web">
+        <div>
+            <ul class="nav_links">
+                <img class="logo" src="imgs/icono_xxs.png" alt="">
+                <div class="name_logo">TravelCO</div>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contribución</a></li>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#" class="usuario_nav">Marcela</a></li>
+                <li></li>
+                <img class="profile_pic" src="imgs/profile_pic.png" alt="">
+            </ul>
+        </div>
+    </div>
+    
+    <div class="titulo_web">
+        REGIÓN AMAZONIA
+    </div>
+
+    <div class="gallery2"> <img src="imgs/gallery_amazonas.png" alt=""></div>
 
     <div class="contenedor_ldi">
 
@@ -44,7 +89,7 @@
 
             <figure>
                 <img src="imgs/am_mavecure.png">
-                <figcaption>Cerros de Mavecure</figcaption>
+                <figcaption>Cabo de la Vela</figcaption>
             </figure>
     
         </div>
@@ -53,7 +98,7 @@
 
             <figure>
                 <img src="imgs/am_chiribiquete.png">
-                <figcaption>Serranía del Chiribiquete</figcaption>
+                <figcaption>Cartagena de Indias</figcaption>
             </figure>
     
         </div>
@@ -61,8 +106,8 @@
         <div class="foto">
 
             <figure>
-                <img src="imgs/am_raudal.png">
-                <figcaption>Raudal de Jirijirimo</figcaption>
+                <img src="imgs/am_isla_de_los_micos.png">
+                <figcaption>Sierra Nevada S.M</figcaption>
             </figure>
     
         </div>
@@ -70,21 +115,23 @@
 
             <figure>
                 <img src="imgs/am_puerto.png">
-                <figcaption>Puerto Nariño</figcaption>
+                <figcaption>Barranquilla</figcaption>
             </figure>
     
         </div>
         <div class="foto">
 
             <figure>
-                <img src="imgs/am_tanimboca.png">
-                <figcaption>Reserva natural Tanimboca</figcaption>
+                <img src="imgs/am_raudal.png">
+                <figcaption>Parque Tayrona</figcaption>
             </figure>
     
         </div>
 
 
     </div>
+
+   
 
     <div class="contenedor_about">
 
@@ -92,47 +139,19 @@
   
     </div>
 
-    <div class="contenedor_cuerpo">
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
-
-               <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-
-            </div>
-
-            <div class="col" id="totuga">
-
-                <img src="imgs/am_foto_principal.jpg">
-
-            </div>
+    <div class="cuerpo_web">
         
-
-        </div>
-
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
-
-               <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
+        La región Amazónica de Colombia, o Amazonía, es una de las seis regiones naturales de Colombia. Está ubicada al sur del país limitando al norte con las regiones Andina y Orinoquía, al este con Venezuela, al sureste con Brasil, al sur con Perú y al suroeste con Ecuador.         <br>
+        <br>
+        el 40% del territorio colombiano y es la zona menos poblada del país. A la vez, hace parte de la gran región suramericana de la Selva amazónica, la más extensa zona forestal del mundo que es compartida por Venezuela, Brasil, Colombia, Ecuador, Perú, Guyana, Surinam y Bolivia. En consecuencia la región Amazónica de Colombia es la más forestal con una superficie de 483 119 km².     </div>
     
-               <div>Imagenes usadas con el permiso de Fotoclombia.com</div>
+    <div class="contenedor_cuerpo">
+        
+        La Región Caribe se caracteriza por su clima cálido y sus espectaculares playas. En su mayoría se compone de territorio plano, pero también alberga la formación montañosa litoral más alta del mundo: la Sierra Nevada de Santa Marta. En sus costas se encuentra el Santuario de Ciénaga Grande de Santa Marta, compuesto por manglares de bosque, ríos, caños y pantano. Esta zona es de gran importancia para el refugio de aves migratorias procedentes de Norteamérica.
+        <br>
+        <br>
+        el 40% del territorio colombiano y es la zona menos poblada del país. A la vez, hace parte de la gran región suramericana de la Selva amazónica, la más extensa zona forestal del mundo que es compartida por Venezuela, Brasil, Colombia, Ecuador, Perú, Guyana, Surinam y Bolivia. En consecuencia la región Amazónica de Colombia es la más forestal con una superficie de 483 119 km².    </div>
     
-            </div>
-    
-        </div>
-    
-    </div>
-
-
    
 
 
@@ -145,6 +164,16 @@
       <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
 
     </div>
+
+    <div class="dropup">
+        <button class="dropbtn" id="btn_mapa"><img src="imgs/home_icon2.png" alt=""></button>
+        <div class="dropup-content" id="dropupmenu">
+          <a href="feed.html"><img src="imgs/feed_icon2.png"></a>
+          <a href="search.html"><img src="imgs/search_icon2.png"></a>
+          <a href="review.html"><img src="imgs/write_icon2.png"></a>
+          <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
+        </div>
+      </div>
 
    
   </body>

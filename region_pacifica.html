@@ -12,25 +12,70 @@
   
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+
+        let btn_mapa, ventana, dropupmenu;
+  
+        window.onload = init;
+  
+        function init(){
+          btn_mapa = document.getElementById("btn_mapa");
+          ventana = document.getElementById("ventana");
+          dropupmenu = document.getElementById("dropupmenu");
+          btn_mapa.addEventListener("click",abrir);
+          btn_mapa.addEventListener("mouseleave",cerrar);
+        }
+  
+        function abrir(evt){
+          ventana.classList.add("mostrar");
+          dropupmenu.classList.add("mostrar");
+        }
+  
+        function cerrar(evt){
+          ventana.classList.remove("mostrar");
+          dropupmenu.classList.remove("mostrar");
+        }
+  
+      </script>
 
 
-
-    <title>TravelCO-pacífica</title>
+    <title>TravelCO-Pacifica</title>
 
   
   </head>
   <body>
     
 
-    <div class="titulo_region">
+    <div class="titulo_region" id="titulo_movil">
        REGIÓN
     </div>
 
-    <div class="titulo_caribe">
-        PACÍFICA
+    <div class="titulo_caribe" id="titulo_movil">
+        PACIFICA
     </div>
 
- 
+    
+    <div id="ventana" class="panel"></div>
+    <div class="navbar_web">
+        <div>
+            <ul class="nav_links">
+                <img class="logo" src="imgs/icono_xxs.png" alt="">
+                <div class="name_logo">TravelCO</div>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contribución</a></li>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#" class="usuario_nav">Marcela</a></li>
+                <li></li>
+                <img class="profile_pic" src="imgs/profile_pic.png" alt="">
+            </ul>
+        </div>
+    </div>
+    
+    <div class="titulo_web">
+        REGIÓN PACIFICA
+    </div>
+
+    <div class="gallery2"> <img src="imgs/gallery_pacifica.png" alt=""></div>
 
     <div class="contenedor_ldi">
 
@@ -70,7 +115,7 @@
 
             <figure>
                 <img src="imgs/pa_nuqui.png">
-                <figcaption>Nuquí</figcaption>
+                <figcaption>Nuqui</figcaption>
             </figure>
     
         </div>
@@ -86,50 +131,28 @@
 
     </div>
 
+   
+
     <div class="contenedor_about">
 
         <div>Acerca De</div>
   
     </div>
 
+    <div class="cuerpo_web">
+        
+        La región del Pacífico es una de las seis regiones naturales de Colombia. Comprende casi la totalidad del departamento del Chocó, y las zonas costeras de los departamentos del Valle del Cauca, Cauca y Nariño.         
+        <br>
+        <br>
+        Está ubicada en la franja oeste del país, limitando al norte con Panamá, al noreste con la región Caribe, al este con la cordillera Occidental que la separa de la región andina, al sur con Ecuador y al oeste con el océano Pacífico, de donde toma su nombre. Hace parte del Chocó biogeográfico y está dividida en dos grandes zonas marcadas por el cabo Corrientes. Las principales ciudades son Buenaventura, Tumaco, Quibdó y Nuquí. En ella se desarrolló la cultura Tumaco-La Tolita.  
+    </div> 
+         
     <div class="contenedor_cuerpo">
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
-
-               <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-
-            </div>
-
-            <div class="col" id="totuga">
-
-                <img src="imgs/c_totuga.jpg">
-
-            </div>
         
-
-        </div>
-
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
-
-               <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at tempore adipisci minus quas libero impedit, eum itaque enim repellendus quod unde nihil reiciendis veniam velit. Vero odit ut molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-
-            </div>
-
-        </div>
-        
-        <div class="row">
-
-            <div class="col" id="contenedor_text1">
-    
-               <div>Imagenes usadas con el permiso de Fotoclombia.com</div>
-    
-            </div>
-    
-        </div>
-
+        La región del Pacífico es una de las seis regiones naturales de Colombia. Comprende casi la totalidad del departamento del Chocó, y las zonas costeras de los departamentos del Valle del Cauca, Cauca y Nariño.         
+        <br>
+        <br>
+        Está ubicada en la franja oeste del país, limitando al norte con Panamá, al noreste con la región Caribe, al este con la cordillera Occidental que la separa de la región andina, al sur con Ecuador y al oeste con el océano Pacífico, de donde toma su nombre. Hace parte del Chocó biogeográfico y está dividida en dos grandes zonas marcadas por el cabo Corrientes. Las principales ciudades son Buenaventura, Tumaco, Quibdó y Nuquí. En ella se desarrolló la cultura Tumaco-La Tolita.  
     </div>
    
 
@@ -143,6 +166,16 @@
       <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
 
     </div>
+
+    <div class="dropup">
+        <button class="dropbtn" id="btn_mapa"><img src="imgs/home_icon2.png" alt=""></button>
+        <div class="dropup-content" id="dropupmenu">
+          <a href="feed.html"><img src="imgs/feed_icon2.png"></a>
+          <a href="search.html"><img src="imgs/search_icon2.png"></a>
+          <a href="review.html"><img src="imgs/write_icon2.png"></a>
+          <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
+        </div>
+      </div>
 
    
   </body>
