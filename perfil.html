@@ -1,12 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" >
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+    <script>
+
+      let btn_mapa, ventana, dropupmenu;
+
+      window.onload = init;
+
+      function init(){
+        btn_mapa = document.getElementById("btn_mapa");
+        ventana = document.getElementById("ventana");
+        dropupmenu = document.getElementById("dropupmenu");
+        btn_mapa.addEventListener("click",abrir);
+        btn_mapa.addEventListener("mouseleave",cerrar);
+      }
+
+      function abrir(evt){
+        btn_mapa.removeEventListener("click",abrir);
+        btn_mapa.addEventListener("click",cerrar);
+        ventana.classList.add("mostrar");
+        dropupmenu.classList.add("mostrar");
+      }
+
+      function cerrar(evt){
+        ventana.classList.remove("mostrar");
+        dropupmenu.classList.remove("mostrar");
+        btn_mapa.addEventListener("click",abrir);
+      }
+
+    </script>
+
+    <title>TravelCO</title>
+
+  
+  </head>
+  <body>
+    <div id="ventana" class="panel"></div>
+    <div class="navbar_web">
+      <div>
+        <ul class="nav_links">
+          <img class="logo" src="imgs/icono_xxs.png" alt="">
+          <div class="name_logo">TravelCO</div>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Contribución</a></li>
+          <li><a href="#">Feed</a></li>
+          <li><a href="#" class="usuario_nav">Marcela</a></li>
+          <li></li>
+          <img class="profile_pic" src="imgs/profile_pic.png" alt="">
+        </ul>
+      </div>
+    </div>
+
+    <div class="contenedor_perfil">
+        <div class="parent">
+            <div class="div1"> <img src="imgs/profile_pic.png" alt=""></div>
+            <div class="div2"> Marcela Ramirez</div>
+            <div class="div3"> Se unió en febrero 2022</div>
+            <div class="div4"> Ajustes</div>
+            <div class="div5"> @username</div>
+            <div class="div6"> De Medellín</div>
+            <div class="div7"> Seguidores</div>
+            <div class="div8"> Siguiendo</div>
+            <div class="div9"> Reseñas</div>
+            <div class="div10"> Publicaciones</div>
+            <div class="div11"> 12</div>
+            <div class="div12"> 35</div>
+            <div class="div13"> 6</div>
+            <div class="div14"> 8</div>
+               
+        </div> 
+
+    </div>
+
+
+
+
+    <div class="contenedor_menu" id="nav_bar">
+
+      <a href="feed.html"><img src="imgs/feed_icon2.png"></a>
+      <a href="search.html"><img src="imgs/search_icon2.png"></a>
+      <a href="inicio.html"><img id="item"  src="imgs/home_icon2.png"></a>
+      <a href="review.html"><img src="imgs/write_icon2.png"></a>
+      <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
+
+    </div>
+    <div class="dropup">
+      <button class="dropbtn" id="btn_mapa"><img src="imgs/home_icon2.png" alt=""></button>
+      <div class="dropup-content" id="dropupmenu">
+        <a href="feed.html"><img src="imgs/feed_icon2.png"></a>
+        <a href="search.html"><img src="imgs/search_icon2.png"></a>
+        <a href="review.html"><img src="imgs/write_icon2.png"></a>
+        <a href="perfil.html"><img src="imgs/profile_icon2.png"></a>
+      </div>
+    </div>
+
+  </body>
 </html>
