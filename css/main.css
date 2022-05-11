@@ -704,6 +704,14 @@ figcaption {
     margin-right: 15px;
 }
 
+.limite{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 8;
+}
+
 .contenedor_perfil{
    
     width: 90%;
@@ -712,7 +720,28 @@ figcaption {
     top: 90px;
     left:50%;
     margin-left: -45%;
+    z-index: 10;
 }
+
+.reviews {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 0.8fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.review1 { grid-area: 1 / 1 / 2 / 2; }
+.review2 { grid-area: 2 / 1 / 3 / 2; }
+.review3 { grid-area: 3 / 1 / 4 / 2; }
+.review4 { grid-area: 4 / 1 / 5 / 2; }
+.review5 { grid-area: 5 / 1 / 6 / 2; }
+.review6 { grid-area: 6 / 1 / 7 / 2; }
+.review7 { grid-area: 7 / 1 / 8 / 2; }
+.review8 { grid-area: 8 / 1 / 9 / 2; }
+.review9 { grid-area: 9 / 1 / 10 / 2; }
+.review10 { grid-area: 10 / 1 / 11 / 2; }
+    
 
 .parent {
     border-radius: 25px;
@@ -782,9 +811,7 @@ figcaption {
 
 .contenedor_reviews{
     
-    border: 2px solid;
-    border-color: rgb(170, 218, 197);
-    border-radius: 25px;
+    
     width: 90%;
     position: relative;
     display: flex;
@@ -794,7 +821,17 @@ figcaption {
     margin-left: -45%;
 }
 
-.parent2 {
+.parent2{
+    border: 2px solid;
+    border-color: rgb(170, 218, 197);
+    border-radius: 25px;
+    margin: 10px;
+    max-width: 1145px;
+    min-width: 975px;
+}
+
+
+.review2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 0fr);
@@ -802,7 +839,13 @@ figcaption {
     grid-row-gap: 0px;
     align-items: center;
     margin: 20px;
+    
 }
+
+
+
+
+
 
 .div15 { 
     grid-area: 1 / 1 / 5 / 2; 
@@ -818,9 +861,12 @@ figcaption {
     grid-area: 1 / 3 / 2 / 4;
     display: flex;
     justify-content: flex-end;
+    color: rgb(80, 130, 124);
     font-weight: 100;
     font-size: 14px;
     margin-right: 10px;
+    text-decoration: underline;     
+    text-decoration-color: rgb(80, 130, 124);
  }
 .div18 { grid-area: 2 / 2 / 3 / 4; }
 .div19 { 
@@ -834,6 +880,7 @@ figcaption {
     font-weight: 200;
     margin-right: 64px;
 }
+
 
 .nav_perfil{
     display: flex;
