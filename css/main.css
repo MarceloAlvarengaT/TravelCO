@@ -710,7 +710,7 @@ figcaption {
     height: 100px;
     background-color: rgb(255, 255, 255);
     position: fixed;
-    z-index: 8;
+    z-index: 6;
 }
 
 .contenedor_perfil{
@@ -1081,7 +1081,7 @@ figcaption {
 
 .contenedor_perfil_tablet{
     width: 90%;
-    display: block;
+    display: none;
     position: fixed;
     top: 35px;
     left:50%;
@@ -1092,6 +1092,7 @@ figcaption {
     border-radius: 25px;
     border-color:rgb(186, 228, 210);
     min-width: 500px;
+    
 }
 
 .parent_perfil_tablet {
@@ -1186,6 +1187,52 @@ figcaption {
     margin-top: 10px;
 }
 
+.nav_perfil_tablet {
+    display: none;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: rgb(186, 228, 210);
+    border: 2px solid;
+    border-color: rgb(186, 228, 210);
+    border-radius: 10px;
+    position: fixed;
+    top: 310px;
+    left: 50%;
+    margin-left: -45%;
+    z-index: 10;
+    width: 90%;
+    
+}
+
+.f { grid-area: 1 / 1 / 2 / 2; 
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.p { grid-area: 1 / 2 / 2 / 3; 
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.v { grid-area: 1 / 3 / 2 / 4; 
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+    
+.limite2{
+    display: none;
+    width: 100%;
+    height: 358px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 6;
+}
+
 /* Media Tablet */
 @media (max-width: 1024px){
     
@@ -1239,7 +1286,15 @@ figcaption {
 
     .parent_perfil_tablet{display: grid;}
 
-    .limite{display: none;}
+    .contenedor_perfil_tablet{display: block}
+
+    .nav_perfil{display: none;}
+
+    .nav_perfil_tablet{display: grid;}
+
+    .limite2{display: flex;}
+
+    .contenedor_reviews{display: none;}
 }  
 
 /* Media Movil */
